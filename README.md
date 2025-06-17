@@ -1,41 +1,71 @@
-# TITLE
+# 🌐 Cloud CLI Installers
 
-[![License: UPL](https://img.shields.io/badge/license-UPL-green)](https://img.shields.io/badge/license-UPL-green) [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=oracle-devrel_test)](https://sonarcloud.io/dashboard?id=oracle-devrel_test)
+This repository provides individual installation scripts for major cloud provider CLIs across different platforms:
 
-## THIS IS A NEW, BLANK REPO THAT IS NOT READY FOR USE YET.  PLEASE CHECK BACK SOON!
+- **Azure CLI**
+- **Google Cloud CLI**
+- **AWS CLI**
+- **OCI CLI**
 
-## Introduction
-MISSING
+## 📁 Directory Structure
 
-## Getting Started
-MISSING
+```
+macos/
+  install_azure.sh
+  install_gcloud.sh
+  install_aws.sh
+  install_oci.sh
 
-### Prerequisites
-MISSING
+ubuntu/
+  install_azure.sh
+  install_gcloud.sh
+  install_aws.sh
+  install_oci.sh
 
-## Notes/Issues
-MISSING
+oel/
+  install_azure.sh
+  install_gcloud.sh
+  install_aws.sh
+  install_oci.sh
 
-## URLs
-* Nothing at this time
+windows/
+  install_azure.ps1
+  install_gcloud.ps1
+  install_aws.ps1
+  install_oci.ps1
+```
 
-## Contributing
-<!-- If your project has specific contribution requirements, update the
-    CONTRIBUTING.md file to ensure those requirements are clearly explained. -->
+## ✅ Supported Platforms
 
-This project welcomes contributions from the community. Before submitting a pull
-request, please [review our contribution guide](./CONTRIBUTING.md).
+- `macOS` (via Homebrew or pkg installers)
+- `Ubuntu` (apt-based)
+- `Oracle Linux 8/9` (dnf/yum-based)
+- `Windows` (PowerShell, run as Administrator)
 
-## Security
+## 🚀 Usage
 
-Please consult the [security guide](./SECURITY.md) for our responsible security
-vulnerability disclosure process.
+### On Linux/macOS:
+```bash
+bash install_azure.sh
+bash install_gcloud.sh
+bash install_aws.sh
+bash install_oci.sh
+```
 
-## License
-Copyright (c) 2024 Oracle and/or its affiliates.
+### On Windows (PowerShell as Administrator):
+```powershell
+./install_azure.ps1
+./install_gcloud.ps1
+./install_aws.ps1
+./install_oci.ps1
+```
 
-Licensed under the Universal Permissive License (UPL), Version 1.0.
+## 📦 All-in-One Archive
 
-See [LICENSE](LICENSE.txt) for more details.
+If you're downloading the `.zip`, extract and run the scripts based on your platform.
 
-ORACLE AND ITS AFFILIATES DO NOT PROVIDE ANY WARRANTY WHATSOEVER, EXPRESS OR IMPLIED, FOR ANY SOFTWARE, MATERIAL OR CONTENT OF ANY KIND CONTAINED OR PRODUCED WITHIN THIS REPOSITORY, AND IN PARTICULAR SPECIFICALLY DISCLAIM ANY AND ALL IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR PURPOSE.  FURTHERMORE, ORACLE AND ITS AFFILIATES DO NOT REPRESENT THAT ANY CUSTOMARY SECURITY REVIEW HAS BEEN PERFORMED WITH RESPECT TO ANY SOFTWARE, MATERIAL OR CONTENT CONTAINED OR PRODUCED WITHIN THIS REPOSITORY. IN ADDITION, AND WITHOUT LIMITING THE FOREGOING, THIRD PARTIES MAY HAVE POSTED SOFTWARE, MATERIAL OR CONTENT TO THIS REPOSITORY WITHOUT ANY REVIEW. USE AT YOUR OWN RISK. 
+---
+
+Contributions welcome! PRs and suggestions for expansion (e.g., containerized installers, platform detection) are appreciated.
+
+MIT License.
