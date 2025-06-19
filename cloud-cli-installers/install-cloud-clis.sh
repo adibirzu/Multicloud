@@ -33,6 +33,9 @@ elif [[ -f /etc/os-release ]]; then
   if [[ "$ID" == "ubuntu" || "$ID_LIKE" == *"debian"* ]]; then
     echo "🟩 Installing on Ubuntu..."
 
+    sudo apt-get update
+    sudo apt-get install -y unzip apt-transport-https ca-certificates gnupg curl
+
     curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
     sudo apt-get install -y apt-transport-https ca-certificates gnupg curl
@@ -51,7 +54,8 @@ elif [[ -f /etc/os-release ]]; then
 
   elif [[ "$ID" == "ol" || "$ID_LIKE" == *"rhel"* ]]; then
     echo "🟥 Installing on Oracle Linux..."
-
+    
+    sudo dnf install -y unzip curl
     sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
     echo -e "[azure-cli]
 name=Azure CLI
